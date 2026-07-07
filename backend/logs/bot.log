@@ -1,0 +1,60 @@
+2026-07-07 21:12:19 | INFO     | trading_bot | Trading bot started — Binance Futures Testnet
+2026-07-07 21:12:37 | INFO     | trading_bot | → GET https://testnet.binancefuture.com/fapi/v1/ping {}
+2026-07-07 21:12:38 | INFO     | trading_bot | ← 200 https://testnet.binancefuture.com/fapi/v1/ping
+2026-07-07 21:12:38 | INFO     | trading_bot | → GET https://testnet.binancefuture.com/fapi/v1/time {}
+2026-07-07 21:12:38 | INFO     | trading_bot | ← 200 https://testnet.binancefuture.com/fapi/v1/time
+2026-07-07 21:17:39 | INFO     | trading_bot | Shut down
+2026-07-07 21:18:05 | INFO     | trading_bot | Trading bot started — Binance Futures Testnet
+2026-07-07 21:18:45 | INFO     | trading_bot | → GET https://testnet.binancefuture.com/fapi/v1/ping {}
+2026-07-07 21:18:45 | INFO     | trading_bot | → GET https://testnet.binancefuture.com/fapi/v1/time {}
+2026-07-07 21:18:45 | INFO     | trading_bot | → GET https://testnet.binancefuture.com/fapi/v1/ping {}
+2026-07-07 21:18:45 | INFO     | trading_bot | → GET https://testnet.binancefuture.com/fapi/v2/account {'timestamp': 1783439325643}
+2026-07-07 21:18:45 | INFO     | trading_bot | → GET https://testnet.binancefuture.com/fapi/v1/time {}
+2026-07-07 21:18:45 | INFO     | trading_bot | → GET https://testnet.binancefuture.com/fapi/v2/account {'timestamp': 1783439325649}
+2026-07-07 21:18:46 | INFO     | trading_bot | ← 200 https://testnet.binancefuture.com/fapi/v1/ping
+2026-07-07 21:18:46 | INFO     | trading_bot | ← 200 https://testnet.binancefuture.com/fapi/v1/ping
+2026-07-07 21:18:46 | INFO     | trading_bot | ← 200 https://testnet.binancefuture.com/fapi/v1/time
+2026-07-07 21:18:46 | INFO     | trading_bot | ← 200 https://testnet.binancefuture.com/fapi/v1/time
+2026-07-07 21:18:46 | INFO     | trading_bot | ← 200 https://testnet.binancefuture.com/fapi/v2/account?timestamp=1783439325649&signature=f7dd5dc52804464b74a4a85d2c0de2983274a95c3ca285bea23b37d77705af30
+2026-07-07 21:18:46 | INFO     | trading_bot | ← 200 https://testnet.binancefuture.com/fapi/v2/account?timestamp=1783439325643&signature=28f05580d229b362b01a7127d7debfa955aaa186a618c630d3b092be184c80db
+2026-07-07 21:18:53 | INFO     | trading_bot | → GET https://testnet.binancefuture.com/fapi/v1/ping {}
+2026-07-07 21:18:53 | INFO     | trading_bot | → GET https://testnet.binancefuture.com/fapi/v1/time {}
+2026-07-07 21:18:53 | INFO     | trading_bot | → GET https://testnet.binancefuture.com/fapi/v2/account {'timestamp': 1783439333178}
+2026-07-07 21:18:53 | INFO     | trading_bot | ← 200 https://testnet.binancefuture.com/fapi/v1/time
+2026-07-07 21:18:53 | INFO     | trading_bot | ← 200 https://testnet.binancefuture.com/fapi/v1/ping
+2026-07-07 21:18:53 | INFO     | trading_bot | ← 200 https://testnet.binancefuture.com/fapi/v2/account?timestamp=1783439333178&signature=47e80c7dce957243bb29cfa3527f20f56382252ff324a7f7d979059ec7b68d2a
+2026-07-07 21:19:02 | INFO     | trading_bot | → POST https://testnet.binancefuture.com/fapi/v1/order {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.001, 'timestamp': 1783439342811}
+2026-07-07 21:19:03 | INFO     | trading_bot | ← 200 https://testnet.binancefuture.com/fapi/v1/order?symbol=BTCUSDT&side=BUY&type=MARKET&quantity=0.001&timestamp=1783439342811&signature=64df849e0f8619dec7dc243a2bc193bf820ba6009a562b6acb3dc32495d51111
+2026-07-07 21:19:17 | INFO     | trading_bot | → POST https://testnet.binancefuture.com/fapi/v1/order {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'LIMIT', 'quantity': 1.0, 'price': 1000.0, 'timeInForce': 'GTC', 'timestamp': 1783439357138}
+2026-07-07 21:19:17 | INFO     | trading_bot | ← 200 https://testnet.binancefuture.com/fapi/v1/order?symbol=BTCUSDT&side=BUY&type=LIMIT&quantity=1.0&price=1000.0&timeInForce=GTC&timestamp=1783439357138&signature=c42b6c2e2f1be4d29be352747cf309c254d3b6d4d200f939e5b18ebac0f0fbbe
+2026-07-07 21:19:19 | INFO     | trading_bot | → GET https://testnet.binancefuture.com/fapi/v2/account {'timestamp': 1783439359168}
+2026-07-07 21:19:19 | INFO     | trading_bot | → GET https://testnet.binancefuture.com/fapi/v2/account {'timestamp': 1783439359168}
+2026-07-07 21:19:19 | INFO     | trading_bot | ← 200 https://testnet.binancefuture.com/fapi/v2/account?timestamp=1783439359168&signature=1083f3795c9a20723fa8580dfc3713159024912554f57472080def405c3565e7
+2026-07-07 21:19:19 | INFO     | trading_bot | ← 200 https://testnet.binancefuture.com/fapi/v2/account?timestamp=1783439359168&signature=1083f3795c9a20723fa8580dfc3713159024912554f57472080def405c3565e7
+2026-07-07 21:19:21 | INFO     | trading_bot | → GET https://testnet.binancefuture.com/fapi/v2/positionRisk {'timestamp': 1783439361702}
+2026-07-07 21:19:21 | INFO     | trading_bot | → GET https://testnet.binancefuture.com/fapi/v2/positionRisk {'timestamp': 1783439361703}
+2026-07-07 21:19:21 | INFO     | trading_bot | ← 200 https://testnet.binancefuture.com/fapi/v2/positionRisk?timestamp=1783439361703&signature=c971b2c46e33907a722d533d5ea780472fe0da1297c1c7f34b35d5d0ba804cea
+2026-07-07 21:19:21 | INFO     | trading_bot | ← 200 https://testnet.binancefuture.com/fapi/v2/positionRisk?timestamp=1783439361702&signature=dd0cd1b89ba0021d5af92fdfc69f4aa3b12d98dee8de8a4ada129d98cbf95917
+2026-07-07 21:19:36 | INFO     | trading_bot | → GET https://testnet.binancefuture.com/fapi/v1/openOrders {'timestamp': 1783439376165}
+2026-07-07 21:19:36 | INFO     | trading_bot | → GET https://testnet.binancefuture.com/fapi/v1/openOrders {'timestamp': 1783439376165}
+2026-07-07 21:19:36 | INFO     | trading_bot | ← 200 https://testnet.binancefuture.com/fapi/v1/openOrders?timestamp=1783439376165&signature=b41f65d7df823a4442ec866203616ac2a103bc8f258268edf9dc6a7ad5f5395c
+2026-07-07 21:19:36 | INFO     | trading_bot | ← 200 https://testnet.binancefuture.com/fapi/v1/openOrders?timestamp=1783439376165&signature=b41f65d7df823a4442ec866203616ac2a103bc8f258268edf9dc6a7ad5f5395c
+2026-07-07 21:20:08 | INFO     | trading_bot | → GET https://testnet.binancefuture.com/fapi/v1/ping {}
+2026-07-07 21:20:08 | INFO     | trading_bot | → GET https://testnet.binancefuture.com/fapi/v1/time {}
+2026-07-07 21:20:08 | INFO     | trading_bot | → GET https://testnet.binancefuture.com/fapi/v2/account {'timestamp': 1783439408348}
+2026-07-07 21:20:08 | INFO     | trading_bot | → GET https://testnet.binancefuture.com/fapi/v1/ping {}
+2026-07-07 21:20:08 | INFO     | trading_bot | → GET https://testnet.binancefuture.com/fapi/v1/time {}
+2026-07-07 21:20:08 | INFO     | trading_bot | → GET https://testnet.binancefuture.com/fapi/v2/account {'timestamp': 1783439408356}
+2026-07-07 21:20:08 | INFO     | trading_bot | ← 200 https://testnet.binancefuture.com/fapi/v1/ping
+2026-07-07 21:20:09 | INFO     | trading_bot | ← 200 https://testnet.binancefuture.com/fapi/v1/ping
+2026-07-07 21:20:09 | INFO     | trading_bot | ← 200 https://testnet.binancefuture.com/fapi/v1/time
+2026-07-07 21:20:09 | INFO     | trading_bot | ← 200 https://testnet.binancefuture.com/fapi/v1/time
+2026-07-07 21:20:09 | INFO     | trading_bot | ← 200 https://testnet.binancefuture.com/fapi/v2/account?timestamp=1783439408348&signature=af9fda5d80f571d80835608c399b47506dc151c73ee03706d0d3d045958c6eff
+2026-07-07 21:20:09 | INFO     | trading_bot | ← 200 https://testnet.binancefuture.com/fapi/v2/account?timestamp=1783439408356&signature=32a18ce5107f0b61b7a05aed77e27a3e9da498ff663c5aff904ab15c77fb5a37
+2026-07-07 21:20:19 | INFO     | trading_bot | → GET https://testnet.binancefuture.com/fapi/v1/ping {}
+2026-07-07 21:20:19 | INFO     | trading_bot | → GET https://testnet.binancefuture.com/fapi/v1/time {}
+2026-07-07 21:20:19 | INFO     | trading_bot | → GET https://testnet.binancefuture.com/fapi/v2/account {'timestamp': 1783439419275}
+2026-07-07 21:20:19 | INFO     | trading_bot | ← 200 https://testnet.binancefuture.com/fapi/v1/ping
+2026-07-07 21:20:19 | INFO     | trading_bot | ← 200 https://testnet.binancefuture.com/fapi/v1/time
+2026-07-07 21:20:19 | INFO     | trading_bot | ← 200 https://testnet.binancefuture.com/fapi/v2/account?timestamp=1783439419275&signature=9087ca3112f7cb8faa75d50b9d6a684d46bde51d844ecfb6675781af2c0fc87f
+2026-07-07 21:20:28 | INFO     | trading_bot | Shut down
