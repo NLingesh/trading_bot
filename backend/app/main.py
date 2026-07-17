@@ -7,6 +7,7 @@ from dotenv import load_dotenv
 from fastapi import Depends, FastAPI, Query, status
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
+from fastapi.staticfiles import StaticFiles
 
 from app.client import BinanceRestClient
 from app.exceptions import BinanceAPIError, ConfigurationError, NetworkError, ValidationError
@@ -34,7 +35,7 @@ app = FastAPI(
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173", "http://127.0.0.1:5173"],
+    allow_origins=["*"],
     allow_methods=["*"],
     allow_headers=["*"],
 )
@@ -112,3 +113,11 @@ def limit_order(order: LimitOrderRequest, c: BinanceRestClient = Depends(get_cli
 @app.delete("/cancel/{symbol}/{order_id}", tags=["Orders"])
 def cancel(symbol: str, order_id: int, c: BinanceRestClient = Depends(get_client)):
     return format_order(svc.cancel_order(c, validate_symbol(symbol), order_id))
+
+FRONTEND_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", "frontend", "dist"))
+if os.path.exists(FRONTEND_DIR):
+    app.mount("/", StaticFiles(directory=FRONTEND_DIR, html=True), name="static")
+
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run("app.main:app", host="0.0.0.0", port=8000, reload=True)

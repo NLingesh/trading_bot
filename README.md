@@ -36,31 +36,58 @@ trading_bot/
 
 ## Quick Start
 
-### 1. Backend
+### Option A: Local Development (Separate Ports)
 
-```bash
-cd backend
-cp .env.example .env       # fill in your Testnet API key + secret
-python3 -m venv venv
-source venv/bin/activate
-pip install -r requirements.txt
-uvicorn app.main:app --reload
-```
+1. **Backend Server (Port 8000)**
+   ```bash
+   cd backend
+   cp .env.example .env       # fill in your Testnet API key + secret
+   python3 -m venv venv
+   source venv/bin/activate
+   pip install -r requirements.txt
+   uvicorn app.main:app --reload
+   ```
+   *Swagger docs available at: http://127.0.0.1:8000/docs*
 
-Backend: http://127.0.0.1:8000  
-Swagger: http://127.0.0.1:8000/docs
+2. **Frontend Dev Server (Port 5173)**
+   ```bash
+   cd frontend
+   npm install
+   npm run dev
+   ```
+   *Access frontend locally at: http://localhost:5173*
 
-### 2. Frontend
+---
 
-```bash
-cd frontend
-npm install
-npm run dev
-```
+### Option B: Unified Production Server & Public Link (Ngrok)
 
-Frontend: http://localhost:5173
+You can serve both the React frontend and FastAPI backend on the same port (`8000`), allowing you to expose the entire app publicly with a single ngrok tunnel.
 
-### 3. Get Testnet API Keys
+1. **Build the React UI**
+   ```bash
+   cd frontend
+   npm install
+   npm run build
+   ```
+   *This compiles the React assets into `frontend/dist`.*
+
+2. **Start the Unified Server**
+   ```bash
+   cd backend
+   source venv/bin/activate
+   uvicorn app.main:app --port 8000 --host 0.0.0.0 --reload
+   ```
+   *FastAPI will now serve the compiled UI at `http://localhost:8000/` and API endpoints at `http://localhost:8000/ping`.*
+
+3. **Expose Publicly via Ngrok**
+   ```bash
+   ngrok http 8000
+   ```
+   *Use the generated public URL (e.g. `https://xxxx.ngrok-free.app`) to access the full application from any device.*
+
+---
+
+### Get Testnet API Keys
 
 Visit → https://testnet.binancefuture.com  
 Login with GitHub → API Key section → Generate Key
